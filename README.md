@@ -4,7 +4,7 @@
 
 Goal of this project is to design a constant current LED driver for high power LED modules.
 To be able to use large LED modules (e.g. V_FW = 35V) or multiple modules in series boost topology is used.
-The maximum output voltage is 75V to allow two 35V modules in series.
+The maximum output voltage is configurable up to 70V to allow two 35V modules in series.
 
 TIs [LM3424](http://www.ti.com/lit/ds/symlink/lm3424.pdf) chip is used in this design.
 
@@ -24,7 +24,7 @@ Any 18V..20V (cheap) notebook power supply with a sufficient power rating can be
 
 ### Specs
 * Input: 12V to 24V
-* Output: 9 LEDs at 827mA or 389mA
+* Output: Up to 20 LEDs (70V) at 827mA or 389mA
 * 70°C - 90°C Thermal Foldback
 * 1.5MHz Switching Frequency
 * PWM Dimming up to 30 kHz (?)
