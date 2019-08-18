@@ -1,0 +1,16 @@
+*/eagle.epf
+*.s#*
+*.b#*
+*.l#*
+
+# kicad
+*.bak
+*.bck
+*.kicad_pcb-bak
+*-cache.lib
+# *-rescue.lib
+ftp-lib-table
+fp-info-cache
+
+# for external tools
+*.dsn
