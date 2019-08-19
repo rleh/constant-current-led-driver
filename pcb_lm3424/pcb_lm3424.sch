@@ -195,7 +195,7 @@ L Device:L L1
 U 1 1 5D504F38
 P 5950 2100
 F 0 "L1" V 6140 2100 50  0000 C CNN
-F 1 "MSS1210-104KE" V 6049 2100 50  0000 C CNN
+F 1 "MSS1210-153ME" V 6049 2100 50  0000 C CNN
 F 2 "Inductor_SMD:L_12x12mm_H8mm" H 5950 2100 50  0001 C CNN
 F 3 "~" H 5950 2100 50  0001 C CNN
 	1    5950 2100
@@ -895,7 +895,7 @@ Wire Wire Line
 Connection ~ 1600 2600
 Wire Wire Line
 	1600 2600 1300 2600
-Text Notes 1200 1750 0    50   ~ 0
+Text Notes 550  3800 0    50   ~ 0
 C_IN\n1x 4µ7 X7R 100V 1210\n2x 10µ X7R 100V 2220\n1x Elec 10x10.5 Polymer Capacitor\n\n80V 47µF ESR=36mOhm SMD 10.3mmx10.3mm\nEEH-ZC1K470P (1,54€@10)\nor\n80V 33µF ESR=36mOhm SMD 10.3mmx10.3mm\nEEH-ZC1K330P (1,54€@10)\nor EEH-ZA1K330V (1,60€@10)
 Text Notes 10100 4750 0    50   ~ 0
 Overvoltage 83.9V
@@ -960,8 +960,8 @@ F 3 "~" H 9550 3300 50  0001 C CNN
 	1    9550 3300
 	1    0    0    -1  
 $EndComp
-Text Notes 3800 1850 0    50   ~ 0
-D = (V_o - V_in) / V_o\nD_min = (35V - 24V) / 35V = 31.4%\nD_max = (70V - 12V) / 70V = 82.9%\n\n"Δi_LED-PP is recommended by manufacturers to be less than 40%\nof the average LED current. [...] For the boost [...] topologies, Δi_L-PP\ncan be much higher depending on the output capacitance value." (8.1.1)\nΔi_L-PP = 0.15A <= 155mA = 389mA * 40%\n\nL1 = (V_in * D) / (Δi_L-PP * f_sw); V_in_max and D_min (not D_max?)\nL1 = (24V * 31.4%) / (0.15A * 1.57MHz) = 32µH\nL1 = (24V * 82.9%) / (0.15A * 1.57MHz) = 84.5µH\n\nWe choose MSS1210-104 or MSS1278-104; each >= 95µH@2A@50°C\n\nI_L,RMS = (I_LED / D) * sqrt(1 + ((Δi_LED-PP * D / I_LED)^2 / 12) )\nI_L,RMS = (0.827A / 31.4%) * sqrt(1 + ((0.15A * 31.4% / 0.827A)^2 / 12)) = 2.63A
+Text Notes 4500 1700 0    50   ~ 0
+L1 = (V_in * D) / (Δi_L-PP * f_sw); V_in_max and D_min (not D_max?)\nL1 = (24V * 31.4%) / (0.15A * 1.57MHz) = 32µH\nL1 = (24V * 82.9%) / (0.15A * 1.57MHz) = 84.5µH\n[We choose MSS1210-104 or MSS1278-104; each >= 95µH@2A@50°C]\n\nLower inductance wil result in higher ripple current (which is ok).\nAccording to WE RedExpert: L=15..22µH with I_sat>6A\nWE-PD 7447709150, WE-PD 7447709220, MSS1210-153ME or XAL1010-153\n\nI_L,RMS = (I_LED / D) * sqrt(1 + ((Δi_LED-PP * D / I_LED)^2 / 12) )\nI_L,RMS = (0.827A / 31.4%) * sqrt(1 + ((0.15A * 31.4% / 0.827A)^2 / 12)) = 2.63A
 Text Notes 4550 3650 0    50   ~ 0
 f_sw = 1.566MHz
 Text Notes 7300 4900 0    50   ~ 0
@@ -1193,4 +1193,6 @@ F 3 "" H 5950 4850 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	5950 4850 5950 4800
+Text Notes 1500 1600 0    50   ~ 0
+D = (V_o - V_in) / V_o\nD_min = (35V - 24V) / 35V = 31.4%\nD_max = (70V - 12V) / 70V = 82.9%\n\n"Δi_LED-PP is recommended by manufacturers to be less than 40%\nof the average LED current. [...] For the boost [...] topologies, Δi_L-PP\ncan be much higher depending on the output capacitance value." (8.1.1)\nΔi_L-PP = 0.15A <= 155mA = 389mA * 40%
 $EndSCHEMATC
