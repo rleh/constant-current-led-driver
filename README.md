@@ -31,6 +31,28 @@ Any 18V..20V (cheap) notebook power supply with a sufficient power rating can be
 
 ![PCB Preview](img/pcb_lm3424_rev1.png)
 
+### Parts
+
+| Designator | Part                   | MPN                | Quantity | Prize@1 | Prize@10 |
+| ---------- | ---------------------- | ------------------ | -------- | ------- | -------- |
+| U1         | LM3424                 | LM3424MHX          | 1        | 2.73$   | 2.45$    |
+| Q2,Q3      | PSMN025-80YLX          | PSMN025-80YLX      | 2        | 0.57$   | 0.51$    |
+| L1         | WE-PD 7447709220       | 7447709220         | 1        | 2.41$   | 2.20$    |
+| L1         | **or** MSS1210-153ME   | MSS1210-153ME      | 1        | 2.19€   | 1.96€    |
+| D1         | VSSAF5M10-M3/H         | VSSAF5M10-M3/H     | 1        | 0.45$   | 0.36$    |
+| D1         | **or** SL510AFL-TP     | SL510AFL-TP        | 1        | 0.54$   | 0.46$    |
+| Q1         | 2N7002                 | T2N7002AK,LM       | 1        | 0.15$   | 0.13$    |
+| NTC        | NTCLE100E3104JB0       | NTCLE100E3104JB0   | 1        | 0.69$   | 0.57$    |
+| C4         | EEH-ZC1K470P           | EEH-ZC1K470P       | 1        | 2.14$   | 1.72$    |
+| C1,C12,C13 | 4.7µF, 100V, X7R, 1210 | C1210X475K101T     | 3        | 0.41$   | 0.30$    |
+| C2,C3,C14  | 10µF, 100V, X7R, 2220  | FS55X106K101EHG    | 3        | 0.47$   | 0.35$    |
+| R15        | 100mΩ, 0805, 1W        | RUT2012FR100CS     | 1        | 0.30$   | 0.26$    |
+| R13        | 60mΩ, 0805, 1W         | RLP73M2AR062FTDF   | 1        | 0.52$   | 0.45$    |
+| other R    | 8 distinct values      | MPN                | 17       | 0.05$   | 0.01$    |
+| other C    | 5 distinct values      | MPN                | 10       | 0.10$   | 0.02$    |
+
+**Total Cost**: approx. 14$ @ 1pcs; <12$ @ 10pcs
+
 ## License
 
 Copyright Raphael Lehmann 2019
